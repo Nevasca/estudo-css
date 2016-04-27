@@ -4,23 +4,37 @@
         <meta charset="utf-8">
         <title>Estudo CSS</title>
         <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet/less" type="text/css" href="css/my.less">
+        <!-- LESS -->
+        <!--<link rel="stylesheet/less" type="text/css" href="css/my.less">-->
         <!-- Colocar depois de todas as stylesheets, o melhor seria processar no server -->
-        <script type="text/javascript" src="js/less.min.js"></script>
+        <!--<script type="text/javascript" src="js/less.min.js"></script>-->
+        
+        <!-- SASS/SCSS compilado usando Koala -->
+        <link rel="stylesheet" type="text/css" href="css/my.css">
     </head>
     <body>
-        <h1>Título</h1>
-        <ul>
-            <li>Link 1</li>
-            <li>Link 2
-                <ul>
-                    <li>Link 2.1</li>
-                    <li>Link 2.2</li>
-                    <li>Link 2.3</li>
-                </ul>
-            </li>
-            <li>Link 3</li>
-        </ul>
+        <nav>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                
+                <li><a href="#">Link 2</a>
+                    <ul>
+                        <li><a href="#">Link 2.1</a></li>
+                        <li><a href="#">Link 2.2</a></li>
+                        <li><a href="#">Link 2.3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Link 3</a></li>
+            </ul>
+        </nav>
+        <h1>Título</h1>        
         <p>Imagine um texto bem interessante e coloque aqui. Sabe aquele tipo de texto que te desloca do mundo real para mundos místicos, mirabolantes ou engraçados? Ou quem sabe um que te desperte para as inúmeras coisas que você ainda não conhece sobre nosso mundo? Então... este que você acabou de ler com certeza não é um deles, mas você pode inseri-lo aqui.</p>
+        <h2>Mais um título</h2>
+        <p>Mais um texto</p>
+        <h3>Outro título</h3>
+        <p>Mais outro parágrafo</p>
+        <input type="text">
+        <input type="email">
+        <div class="forma"></div>
     </body>
 </html>

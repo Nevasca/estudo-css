@@ -1,0 +1,11 @@
+$tema: 0;
+
+$corPrincipal: #fffaf0;
+$corTitulo: #728383;
+$corTexto: #2c2c2c;
+
+@if $tema == 1 {
+    $corPrincipal: #46443f;
+    $corTitulo: #28a0a0;
+    $corTexto: #c9c9c9;
+}

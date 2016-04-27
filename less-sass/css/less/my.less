@@ -1,0 +1,79 @@
+@import "cores";
+@import "mixins";
+
+@tamanho-padrao: 14px;
+
+//Namespace
+#navegacaoTeste {
+    
+    .dropDown() {
+        position: absolute;              
+        width: 100px;
+        background-color: shade(@cor-principal, 10%);
+        .canto-arredondado(2px);
+    }
+}
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: @cor-principal;
+    font-size: @tamanho-padrao;
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+    background-color:  shade(@cor-principal, 40%);    
+    
+    ul {
+        list-style: none;
+        padding-left: 50px;     
+        
+        li {
+            float: left;
+            margin: 10px;         
+            
+            a {
+                text-decoration: none;                
+            }
+            
+            ul {                
+                #navegacaoTeste > .dropDown();
+                display: none;                
+            }
+            
+            &:hover {
+                color: lighten(@cor-principal, 10%);                
+                ul {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+h1 {
+    font-size: @tamanho-padrao + 15px;
+    color: darken(@cor-principal, 50%);
+}
+
+h2 {
+    font-size: @tamanho-padrao + 10px;
+}
+
+h3 {
+    font-size: @tamanho-padrao + 5px;
+}
+
+input {
+    .canto-arredondado(10px);    
+}
+
+.forma {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    background-color: darken(@cor-principal, 50%);
+    .canto-arredondado(50%);
+}

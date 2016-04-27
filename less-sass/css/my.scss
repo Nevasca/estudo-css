@@ -1,0 +1,86 @@
+@import "cores";
+@import "mixins";
+
+$tamanhoFonte: 14px;
+$url: "http://localhost/estudo-css/less-sass/";
+
+//Funcao teste
+$tamanhoApp: 1024px;
+@function larguraCentro($margemLateral) {
+    @return $tamanhoApp - ($margemLateral * 2);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: $corPrincipal;
+    font-size: $tamanhoFonte;
+    color: $corTexto;
+}
+nav {
+    margin: 0 auto;
+  width: larguraCentro(100px);
+  height: 50px;
+  background-color: darken($corPrincipal, 50%);
+    
+    ul {
+        list-style: none;
+        padding-left: 0px;
+        
+        li {
+            float: left;
+            margin: 10px;
+            
+            a {
+                text-decoration: none;
+            }
+            
+            ul {
+                position: absolute;
+                width: 100px;
+                background-color: #e6e1d8;
+                @include canto-arredondado(3px);
+                display: none;
+            }
+            
+            &:hover {
+                color: #ffffff;
+                
+                ul {
+                    display: block;
+                }
+            }
+        }        
+    }
+}
+
+.titulo {
+    color: $corTitulo;
+    text-transform: uppercase;
+}
+
+h1 {
+    @extend .titulo;
+    font-size: $tamanhoFonte + 15;
+  
+}
+h2 {    
+    @extend .titulo;
+    font-size: $tamanhoFonte + 10;    
+}
+h3 {
+    @extend .titulo;
+    font-size: $tamanhoFonte + 5;    
+}
+
+input {
+  @include canto-arredondado(5px);
+}
+
+.forma {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  background-image: url("#{$url}img/eu.jpg");
+  background-size: contain;
+  @include canto-arredondado(50%);
+}
