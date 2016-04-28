@@ -1,0 +1,6 @@
+Sobre responsive web design:
+
+https://github.com/sparkbox/Build-Responsively-Workshop
+
+Script para ajudar com media queries:
+https://github.com/sparkbox/mediaQueryBookmarklet
