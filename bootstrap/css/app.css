@@ -1,5 +1,6 @@
 body {
-	font-family: 'Open Sans', sans-serif;
+    position: relative;
+	font-family: 'Open Sans', sans-serif;    
     /*padding-top: 80px;*/
 }
 
@@ -172,4 +173,62 @@ article p {
         margin-bottom: 30px;
         margin-top: 20px;
     }
+}
+
+.text-banner {
+    text-align: center;
+    margin: 40px 20px;
+}
+
+.text-banner h1 {
+    font-size: 44px;
+}
+
+.text-banner p {
+    font-size: 18px;
+}
+
+.activity-section {
+    margin: 50px;    
+}
+
+.activity-element {
+    text-align: center;
+}
+
+.activity-element img {
+    height: 150px;
+    width: 150px;
+}
+
+.contact-us {
+    margin: 50px;
+    text-align: center;
+}
+
+.title-row {
+    position: relative;
+    min-height: 300px;
+}
+
+.title-image {
+    position: absolute;
+    padding: 20px;
+    /*Centraliza no meio*/
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+.down-button {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    text-align: center;
+    z-index: 99;
+}
+
+.down-button span {
+    
 }
