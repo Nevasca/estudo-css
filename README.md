@@ -9,3 +9,9 @@ https://github.com/sparkbox/mediaQueryBookmarklet
 
 Verifica a compatibilidade de uma propriedade CSS
 http://caniuse.com/
+
+Anima os elementos da página quando visíveis (scroll)
+http://mynameismatthieu.com/WOW/index.html
+
+Galeria de imagens
+http://nanogallery.brisbois.fr/

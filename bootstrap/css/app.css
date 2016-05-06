@@ -232,3 +232,12 @@ article p {
 .down-button span {
     
 }
+
+#carousel {
+    margin: 40px 0px;
+}
+
+#carousel img {
+    width: 100%;
+    height: auto;
+}

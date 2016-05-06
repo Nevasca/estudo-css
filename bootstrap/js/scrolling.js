@@ -11,5 +11,33 @@ $(function() {
             video: "//www.youtube.com/embed/iJYbiAZ8PaY"
         }
     });
+    
+    //add Bootstrap's scrollspy
+    $('body').scrollspy({
+        target: '.navbar',
+        offset: 160
+    });
+    
+    //Smooth scrolling
+    $('nav a, .down-button a').bind('click', function() {
+        $('html, body').stop().animate({
+            scrollTop: $($(this).attr('href')).offset().top - 100
+        }, 1500, 'easeInOutExpo');
+        event.preventDefault();
+    });
+    
+    //parallax scrolling with stellar.js
+    $(window).stellar();
+    //para usar stellar, colocar isso no elemento com o bg-image:
+    //class="stellar-bg" data-stellar-background-ratio="0.2"
+
+    //Inicializa o WOW
+    new WOW().init();
+
+    //Inicializa a galeria
+    $(document).ready(function () {
+      $("#nanoGallery3").nanoGallery();
+    });
+
 })
 
