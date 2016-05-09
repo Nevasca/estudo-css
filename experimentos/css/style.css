@@ -1,5 +1,4 @@
-body {
-    
+body {    
     height: 1920px;    
 }
 
@@ -28,10 +27,13 @@ tbody tr:first-of-type {
     font-weight: bold;
 }
 
+tbody tr {
+    transition: transform, background-color, 0.3s ease-in 5ms;
+}
+
 tbody tr:hover {
-    background-color: #d4d4d4;
-    
-    transform: translateX(10px);        
+    background-color: #d4d4d4;    
+    transform: scale(1.1);
 }
 
 td[data-tipo = int] {
@@ -43,7 +45,7 @@ td::selection {
     color: white;
 }
 
-td:after {
+td::after {
     content: " " counter(celula);
     counter-increment: celula;
 }
@@ -66,8 +68,8 @@ code::selection, code div::selection {
     background-color: #25ba25;
 }
 
-blockquote p:before, 
-blockquote p:after {
+blockquote p::before, 
+blockquote p::after {
     font-size: 1.8em;
     color: #9b9b9b;
     line-height: 0;
@@ -89,11 +91,11 @@ a:after {
 }
 
 [data-tooltip]:hover {
-    position: relative;
+    position: relative;    
 }
 
 /* Triangulo */
-[data-tooltip]:hover:before {
+[data-tooltip]:hover::before {
     content: "";    
     position: absolute;
     width: 0;
@@ -109,7 +111,7 @@ a:after {
 }
 
 /* Caixa Mensagem */
-[data-tooltip]:hover:after {
+[data-tooltip]:hover::after {
     content: attr(data-tooltip);    
     position: absolute;
     top: 0;
@@ -145,4 +147,123 @@ a:after {
 
 ::-webkit-scrollbar-thumb:window-inactive {
     background: #a5a5a5;
+}
+
+.retangulo {
+    width: 100%;
+    height: 300px;
+    margin: 30px 0;
+}
+
+.bandeira-italia {    
+    background-image: 
+        linear-gradient(to right,
+            #009246 33.33%,
+            #FFF 33.33%,
+            #FFF 66.66%,
+            #CE2B37 66.66%
+        );    
+}
+
+.striped {
+    background-color: rgb(208, 0, 168);
+    background-image:
+        repeating-linear-gradient(45deg,
+            rgba(208, 0, 168, 0.5) 20px,
+            rgba(208, 0, 168, 0.5) 40px,
+            rgba(150, 0, 121, 0.5) 40px,
+            rgba(150, 0, 121, 0.5) 60px
+        ), 
+        repeating-linear-gradient(315deg,
+            rgba(208, 0, 168, 0.5) 20px,
+            rgba(208, 0, 168, 0.5) 40px,
+            rgba(150, 0, 121, 0.5) 40px,
+            rgba(150, 0, 121, 0.5) 60px
+        );          
+}
+
+.grid {    
+    background-image: 
+        /* Linha preta horizontal espacada */
+        repeating-linear-gradient(to top,
+            rgba(255,255,255, 0) 0,
+            rgba(255,255,255, 0) 108px,
+            rgba(0, 0, 0, 0.7) 108px,
+            rgba(0, 0, 0, 0.7) 110px
+        ),
+        /* Linha preta vertical espacada */
+        repeating-linear-gradient(to right,
+            rgba(255,255,255, 0) 0,
+            rgba(255,255,255, 0) 108px,
+            rgba(0, 0, 0, 0.7) 108px,
+            rgba(0, 0, 0, 0.7) 110px
+        ),
+        /* Linhas proximas horizontal */
+        repeating-linear-gradient(to right,
+            rgba(255,255,255, 0) 0,
+            rgba(255,255,255, 0) 10px,
+            rgba(100, 100, 100, 0.6) 10px,
+            rgba(100, 100, 100, 0.6) 11px
+        ),
+        /* Linhas proximas vertical */
+        repeating-linear-gradient(to top,
+            rgba(255,255,255, 0) 0,
+            rgba(255,255,255, 0) 10px,
+            rgba(100, 100, 100, 0.6) 10px,
+            rgba(100, 100, 100, 0.6) 11px
+        )
+        /* gradiente fundo */
+        ,radial-gradient(#313131 50%, #151414 100%);        
+}
+
+@keyframes quadrado {
+    0% {
+        
+    }
+    
+    50% {
+        transform: rotate(45deg) scale(1.5);
+        background-color: aquamarine;
+    }
+    
+    100% {
+        transform: rotate(180deg) scale(1.8);
+        background-color: darkslateblue;
+    }
+
+}
+
+.quadrado {
+    display: inline-block;
+    margin: 40px 60px;
+    width: 100px;
+    height: 100px;
+    background-color: mediumvioletred;
+    animation-name: quadrado;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;   
+    /* shorthand */
+    /*animation: quadrado 2s ease-in-out 0 infinite;*/
+    /*animation-fill-mode: forwards;*/
+    /*transition: all .25s linear;*/
+}
+
+
+.quadrado:hover {
+    /*
+    transform: rotate(90deg) scale(1.5);    
+    transform-origin: 50px 50px;
+    background-color: yellowgreen;*/
+    animation-play-state: paused;
+    
+}
+
+.filtro {
+    display: block;
+    margin: 50px 0;
+    width: 50%;
+    height: auto;
+    -webkit-filter: blur(2px) sepia(100%);
 }

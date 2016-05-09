@@ -7,4 +7,9 @@ Deixando a criatividade fluir
 - Contador com generated content;
 - Tooltip com generated content;
 - Um console que executa linhas de comando;
-- Scrollbar personalizada...
+- Scrollbar personalizada;
+- Bandeira da Itália com gradient;
+- Background striped com gradient;
+- Background grid com gradient;
+- Animações;
+- Filtro em uma foto...
