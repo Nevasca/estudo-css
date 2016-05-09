@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">        
+        <link rel="stylesheet" href="css/style.css">
+        <title>CSS</title>                
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>Col 1</th>
+                    <th>Col 2</th>
+                    <th>Col 3</th>
+                    <th>Col 4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>cel</td>
+                    <td>cel</td>
+                    <td>cel</td>
+                    <td>cel</td>
+                </tr>
+                <tr>
+                    <td>cel</td>
+                    <td>cel</td>
+                    <td data-teste="oi">cel</td>
+                    <td data-tipo="int">cel</td>
+                </tr>
+                <tr>
+                    <td>cel</td>
+                    <td>cel</td>
+                    <td>cel</td>
+                    <td>cel</td>
+                </tr>
+                <tr>
+                    <td>cel</td>
+                    <td>cel</td>
+                    <td>cel</td>
+                    <td>cel</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <input id="nome" type="text"><span data-tooltip="Escreva seu nome"> ? </span>
+        <br>        
+        <a href="style.css" target="_blank" data-teste="funcionou">CSS</a>
+        <br><br>        
+        <button data-tooltip="Essa é uma explicação do que você tem que fazer...">Ajuda</button>
+        
+        <blockquote>
+            <p>A mente é onde eles habitam, e nela</p>
+            <p>podemos fazer do inferno um paraíso, do paraíso um inferno</p>
+        </blockquote>
+        
+        <p>
+            Comandos do console:            
+        </p>
+        <ul>
+            <li>$ mostrar nome (exibe um alerta com o conteúdo digitado no input acima</li>
+            <li>$ mostrar 'mensagem' (exibe um alerta com o conteúdo digitado entre as aspas simples)</li>
+        </ul>
+        
+        <code id="console" contenteditable="true" spellcheck="false">            
+            <div>$ </div>
+        </code>                
+        
+        <script>
+            
+            var ambvConsole = document.getElementById("console");
+            
+            //Adiciona listener ao apertar um botao dentro do console
+            ambvConsole.addEventListener("keypress", function(event) {                
+                //Se o botao abertado foi o Enter
+                if(event.keyCode == "13") {
+                    //Pega a ultima linha digitada
+                    var comando = ambvConsole.lastElementChild.innerHTML;
+                    //Se tiver $ mostrar no comando digitado
+                    if(comando.indexOf("$ mostrar ") > -1) {
+                        //Pega o útimo valor digitado
+                        //Por exemplo: $ mostrar oi
+                        //["$mostrar ", "oi"]
+                        var mostrar = comando.split("$ mostrar ")[1];
+                        if(mostrar.indexOf("'") > -1) {
+                            alert(mostrar);
+                        }
+                        else {
+                            alert(document.getElementById(mostrar).value);   
+                        }                        
+                    }                
+                }                    
+            });
+        </script>
+        
+    </body>
+</html>
