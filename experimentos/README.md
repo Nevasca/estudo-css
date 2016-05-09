@@ -6,4 +6,5 @@ Deixando a criatividade fluir
 - Striped table;
 - Contador com generated content;
 - Tooltip com generated content;
-- Um console que executa linhas de comando...
+- Um console que executa linhas de comando;
+- Scrollbar personalizada...
