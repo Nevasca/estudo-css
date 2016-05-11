@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    color: white;
+    margin: 20px;    
+}
+
+h3 {
+    font-size: 1.1em;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.menu-superior {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background-color: #343538;    
+    text-align: center;
+}
+
+.menu-superior ul li {    
+    display: inline-block;
+    padding: 0 15px;
+    transform: translate(0, 50%);
+}
+
+.container {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: calc(100% - 40px);  
+}
+
+.menu-lateral, .container-comp {
+    float: left;        
+}
+
+.menu-lateral {
+    position: relative;
+    width: 60px;
+    height: 100%;
+    background-color: #4b4e53;    
+}
+.menu-lateral > ul a {
+    display: block;
+    width: 100%;    
+    padding: 30px 2px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    transition: background-color .2s linear;
+}
+.menu-lateral > ul a:hover {
+    background-color: #70757e;
+}
+
+.submenu {
+    /*display: none;*/
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 300px;
+    height: 100%;
+    background-color: #70757e;
+    transform: scale(0,1);
+    transform-origin: left;
+    transition: transform .1s linear .05s;    
+}
+
+.menu-lateral > ul > li:hover .submenu{
+/*    display: block;*/
+    transform: scale(1,1);    
+}
+
+.submenu:hover .menu-lateral > ul a{
+     background-color: #0e52ce;
+}
+
+.container-comp {
+    width: calc(100% - 60px);
+    height: 100%;
+    background-color: #202224;
+    /*background-image: radial-gradient(#182e46 10%, #111e2a 100%);*/
+}
